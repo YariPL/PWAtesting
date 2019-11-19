@@ -41,16 +41,17 @@ btnAdd.addEventListener('click', (e) => {
 	deferredPrompt.userChoice
 		.then((choiceResult) => {
 			if (choiceResult.outcome === 'accepted') {
-				console.log('User accepted the A2HS prompt'); alert('YOU JUST SUPER COOL APP. CONGRATULATIONS! but not yet hehe')
+				console.log('User accepted the A2HS prompt'); 
 			} else {
 				console.log('User dismissed the A2HS prompt');
+				alert('how dare you?')
 			}
 			deferredPrompt = null;
 		});
 });
 window.addEventListener('appinstalled', (evt) => {
 	console.log('a2hs installed');
-	alert('YOU JUST SUPER COOL APP. CONGRATULATIONS!')
+	alert('YOU JUST HAVE INSTALLED THE SUPER COOL APP. CONGRATULATIONS!')
 });
 
 
