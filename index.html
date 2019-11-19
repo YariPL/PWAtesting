@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="UTF-8">
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>wxxafwafaw   fwaf wa wawwwwwwwwwwwwPw22</title>
+
+
+
+<!-- 	<link rel="manifest" href="manifest.json">
+ -->	<link rel="stylesheet" href="css/app.css">
+
+	<!-- Add to home screen for Safari on iOS -->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Template PWA">
+    <link rel="apple-touch-icon" href="img/icon-256x256.png">
+    <!-- Windows -->
+    <meta name="msapplication-TileImage" content="img/icon-256x256.png">
+	<meta name="msapplication-TileColor" content="#2F3BA2">
+	
+		<!-- redirect to https -->
+		<script>if (location.protocol != 'https:') location.href = 'https:' + window.location.href.substring(window.location.protocol.length);</script>
+    
+</head>
+<body>
+		<script>
+
+
+
+			function getBrowser() {
+				var nVer = navigator.appVersion;
+				var nAgt = navigator.userAgent;
+				var browserName = null;//navigator.appName;
+				var fullVersion = null;//''+parseFloat(navigator.appVersion);
+				var majorVersion = null;//parseInt(navigator.appVersion,10);
+				var nameOffset, verOffset, ix;
+
+				// In Opera 15+, the true version is after "OPR/"
+				if ((verOffset = nAgt.indexOf("OPR/")) != -1) {
+					browserName = "Opera";
+					fullVersion = nAgt.substring(verOffset + 4);
+				}
+				// In older Opera, the true version is after "Opera" or after "Version"
+				else if ((verOffset = nAgt.indexOf("Opera")) != -1) {
+					browserName = "Opera";
+					fullVersion = nAgt.substring(verOffset + 6);
+					if ((verOffset = nAgt.indexOf("Version")) != -1)
+						fullVersion = nAgt.substring(verOffset + 8);
+				}
+				// In MSIE, the true version is after "MSIE" in userAgent
+				else if ((verOffset = nAgt.indexOf("MSIE")) != -1) {
+					browserName = "Microsoft Internet Explorer";
+					fullVersion = nAgt.substring(verOffset + 5);
+				}
+				// In Chrome, the true version is after "Chrome"
+				else if ((verOffset = nAgt.indexOf("Chrome")) != -1) {
+					browserName = "Chrome";
+					fullVersion = nAgt.substring(verOffset + 7);
+				}
+				// In Safari, the true version is after "Safari" or after "Version"
+				else if ((verOffset = nAgt.indexOf("Safari")) != -1) {
+					browserName = "Safari";
+					fullVersion = nAgt.substring(verOffset + 7);
+					if ((verOffset = nAgt.indexOf("Version")) != -1)
+						fullVersion = nAgt.substring(verOffset + 8);
+				}
+				// In Firefox, the true version is after "Firefox"
+				else if ((verOffset = nAgt.indexOf("Firefox")) != -1) {
+					browserName = "Firefox";
+					fullVersion = nAgt.substring(verOffset + 8);
+				}
+				// In most other browsers, "name/version" is at the end of userAgent
+				else if ((nameOffset = nAgt.lastIndexOf(' ') + 1) <
+					(verOffset = nAgt.lastIndexOf('/'))) {
+					browserName = nAgt.substring(nameOffset, verOffset);
+					fullVersion = nAgt.substring(verOffset + 1);
+					if (browserName.toLowerCase() == browserName.toUpperCase()) {
+						browserName = navigator.appName;
+					}
+				}
+
+				// new by clement 22 10 2019 ( samsungbrowser also include 'chrome' )
+				if ((verOffset = nAgt.indexOf("SamsungBrowser")) != -1) {
+					browserName = "SamsungBrowser";
+					fullVersion = nAgt.substring(verOffset + 15);
+				}
+
+				if (fullVersion) {
+					// trim the fullVersion string at semicolon/space if present
+					if ((ix = fullVersion.indexOf(";")) != -1)
+						fullVersion = fullVersion.substring(0, ix);
+					if ((ix = fullVersion.indexOf(" ")) != -1)
+						fullVersion = fullVersion.substring(0, ix);
+
+					majorVersion = parseInt('' + fullVersion, 10);
+					if (isNaN(majorVersion)) {
+						fullVersion = '' + parseFloat(navigator.appVersion);
+						majorVersion = parseInt(navigator.appVersion, 10);
+					}
+				}
+
+				var minorVersion = 0;//may need to include minor version later...
+
+				return [browserName.toLowerCase(), majorVersion, minorVersion];
+			}
+			//let c = '<link rel="manifest" href="manifestIOS.json">';
+			//let d = '<link rel="manifest" href="manifestAndroid.json">'
+			if (getBrowser()[0] == "safari") {
+				
+				var c = document.createElement("link");
+				d.setAttribute("rel", "manifest");
+				d.setAttribute("href", "manifestIOS.json");
+				document.getElementsByTagName("head")[0].appendChild(c);
+				alert('safari21')
+
+			} else {
+
+				var d = document.createElement("link");
+				d.setAttribute("rel", "manifest");
+				d.setAttribute("href", "manifestAndroid.json");
+
+
+				console.log(document.getElementsByTagName("head")[0])
+				document.getElementsByTagName("head")[0].appendChild(d);
+				alert('not safari22')
+
+			}
+
+		</script>
+	<div class="butt1 button">BUTTON</div>
+
+	<br/> <br/>
+	<div class="butt2 button">SEND MESSAGE</div>
+
+	<div>
+		<img class='divIMGa' src="" alt="">
+	</div>
+	<div>
+		<img class='divIMG' src="" alt="">
+	</div>
+
+	<img src="img/icon-256x256.png" alt="icon256"/>
+	<iframe src="https://xr.plus/123?d" width="320"height="320" frameborder="0" allow="camera; accelerometer; gyroscope; magnetometer"></iframe>
+
+
+<script>
+	if ('serviceWorker' in navigator) {
+	    navigator.serviceWorker
+		.register('service-worker1.js')
+	    .then(function() { console.log('Service Worker Registered')})
+	    .catch(function(error) {
+		    console.error('Registration failed with ' + error);
+	 	}); 
+	}
+</script>
+	<script src="js/app.js"></script>
+</body>
+</html>

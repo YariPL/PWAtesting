@@ -1,0 +1,4 @@
+# temporarily disable Varnish
+# to make it easier to test changes
+#Header add Cache-Control "max-age=1"
+Header set Cache-Control "max-age=1"
