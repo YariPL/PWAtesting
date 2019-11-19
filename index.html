@@ -6,7 +6,7 @@
 	<meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>wxxafwafaw   fwaf wa wawwwwwwwwwwwwPw22</title>
+	<title>wapickw</title>
 
 
 
@@ -110,12 +110,13 @@
 			//let c = '<link rel="manifest" href="manifestIOS.json">';
 			//let d = '<link rel="manifest" href="manifestAndroid.json">'
 			if (getBrowser()[0] == "safari") {
-				
 				var c = document.createElement("link");
-				d.setAttribute("rel", "manifest");
-				d.setAttribute("href", "manifestIOS.json");
+				c.setAttribute("rel", "manifest");
+				c.setAttribute("href", "manifestIOS.json");
 				document.getElementsByTagName("head")[0].appendChild(c);
-				alert('safari21')
+				
+
+			
 
 			} else {
 
@@ -124,9 +125,7 @@
 				d.setAttribute("href", "manifestAndroid.json");
 
 
-				console.log(document.getElementsByTagName("head")[0])
 				document.getElementsByTagName("head")[0].appendChild(d);
-				alert('not safari22')
 
 			}
 
@@ -142,6 +141,7 @@
 	<div>
 		<img class='divIMG' src="" alt="">
 	</div>
+	<div class='add'>ADD TO</div>
 
 	<img src="img/icon-256x256.png" alt="icon256"/>
 	<iframe src="https://xr.plus/123?d" width="320"height="320" frameborder="0" allow="camera; accelerometer; gyroscope; magnetometer"></iframe>

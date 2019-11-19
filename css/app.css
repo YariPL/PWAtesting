@@ -10,3 +10,13 @@
 	padding:5px;
 	cursor:pointer;
 }
+.add {
+	position: fixed;
+	top:0;
+	right:0;
+	background: green;
+	padding: 4px;
+	color: white;
+	cursor: pointer;
+	display:none;
+}
